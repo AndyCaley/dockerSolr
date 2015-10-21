@@ -8,7 +8,7 @@ TimeoutStartSec=0
 ExecStartPre=-/usr/bin/docker kill solrservice
 ExecStartPre=-/usr/bin/docker rm solrservice
 ExecStartPre=/usr/bin/docker build -t solrimage http://github.com/AndyCaley/dockersolr.git
-ExecStart=/usr/bin/docker run --name solrservice -p 8080:8080 solrimage 
+ExecStart=/usr/bin/docker run --name solrservice -p 8983:8983 solrimage 
 ExecStop=/usr/bin/docker stop solrservice
 
 [X-Fleet]

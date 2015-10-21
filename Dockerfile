@@ -27,4 +27,4 @@ RUN sed --in-place -e 's/^    "$JAVA" "${SOLR_START_OPTS\[@\]}" $SOLR_ADDL_ARGS 
 EXPOSE 8983
 WORKDIR /opt/solr
 USER $SOLR_USER
-CMD ["/opt/solr/bin/solr", "-f"]
+CMD ["java","-jar", "/opt/solr/example/start.jar"]

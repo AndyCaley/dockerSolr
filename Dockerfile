@@ -22,6 +22,6 @@ RUN mkdir -p /opt/solr && \
   chown -R $SOLR_USER:$SOLR_USER /opt/solr
 
 EXPOSE 8983
-WORKDIR /opt/solr
+WORKDIR /opt/solr/example
 USER $SOLR_USER
-CMD ["java","-jar", "/opt/solr/example/start.jar"]
+CMD ["java","-jar", "start.jar"]
